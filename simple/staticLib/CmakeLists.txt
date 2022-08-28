@@ -1,0 +1,11 @@
+add_library(staticLib STATIC)
+
+# 生成一个静态库 - 为他人提供第三方库
+target_sources(staticLib
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/slib.cpp
+)
+target_include_directories(staticLib
+    INTERFACE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)

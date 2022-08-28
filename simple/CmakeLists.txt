@@ -1,0 +1,4 @@
+project(simple)
+add_subdirectory(dynLib)
+add_subdirectory(staticLib)
+add_subdirectory(halloword)

@@ -1,0 +1,10 @@
+add_executable(halloword)
+target_sources(halloword
+PRIVATE
+${CMAKE_CURRENT_SOURCE_DIR}/halloword.cpp
+)
+
+target_link_libraries(halloword
+PRIVATE
+dynLib
+staticLib)
