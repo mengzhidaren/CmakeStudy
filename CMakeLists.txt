@@ -11,7 +11,7 @@ add_subdirectory(simple)
 # include(CPack)
 # include(CTest)
 # enable_testing()
-
+# 这里
 # find_package(Vulkan REQUIRED)
 # if(Vulkan_FOUND)
 # message("找到了 ${Vulkan_INCLUDE_DIRS}")
