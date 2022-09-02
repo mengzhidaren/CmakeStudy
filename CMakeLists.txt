@@ -1,10 +1,12 @@
-cmake_minimum_required(VERSION 3.24.1)
+cmake_minimum_required(VERSION 3.23.2)
 project(cmakedemo VERSION 0.1.0)
 
 # include(cmakeConfig/cmake_compiler.cmake)
 include(cmakeConfig/cmake_output_path.cmake)
 
-add_subdirectory(simple)
+include(lib/attachLib.cmake)
+
+add_subdirectory(opengl)
 # add_executable(cmakedemo main.cpp)
 # set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 # set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
