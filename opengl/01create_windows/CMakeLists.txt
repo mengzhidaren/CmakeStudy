@@ -1,5 +1,5 @@
-add_executable(study1)
-target_sources(study1
+add_executable(01createWindow)
+target_sources(01createWindow
         PRIVATE
         study1.cpp
         )
@@ -7,7 +7,7 @@ target_sources(study1
 
 message("LIBS=[ ${LIBS} ]")
 
-target_link_libraries(study1
+target_link_libraries(01createWindow
         PRIVATE
         ${LIBS})
 

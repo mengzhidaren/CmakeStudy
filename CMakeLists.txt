@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.23.2)
 project(cmakedemo VERSION 0.1.0)
-
+set(CMAKE_CXX_STANDARD 14)
 # include(cmakeConfig/cmake_compiler.cmake)
 include(cmakeConfig/cmake_output_path.cmake)
 
