@@ -9,7 +9,7 @@ add_executable(02triangle
 #        )
 
 
-message("LIBS=[ ${LIBS} ]")
+#message("02triangle  LIBS=[ ${LIBS} ]")
 
 target_link_libraries(02triangle
         PRIVATE

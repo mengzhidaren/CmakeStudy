@@ -5,7 +5,7 @@ target_sources(01createWindow
         )
 
 
-message("LIBS=[ ${LIBS} ]")
+#message("01createWindow   LIBS=[ ${LIBS} ]")
 
 target_link_libraries(01createWindow
         PRIVATE

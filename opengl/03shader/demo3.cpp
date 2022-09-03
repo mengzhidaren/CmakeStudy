@@ -6,8 +6,10 @@
 #include <GLFW/glfw3.h>
 #include "yyl/shader.h"
 #include <iostream>
+
 namespace shaper3{
 
+    using namespace std;
     const unsigned int SCR_WIDTH = 800;
     const unsigned int SCR_HEIGHT = 600;
 
@@ -97,8 +99,7 @@ namespace shaper3{
         unsigned int VBO = createVBO();
 
 
-        Shader outShader("src/05_shader/shader/vertex.vert","src/05_shader/shader/fragment.frag");
-
+        Shader outShader(R"(\03shader\shader\vertex.vert)",R"(\03shader\shader\fragment.frag)");
 
         while (!glfwWindowShouldClose(window))
         {

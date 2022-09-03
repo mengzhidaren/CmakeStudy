@@ -1,8 +1,10 @@
-cmake_minimum_required(VERSION 3.23.2)
+cmake_minimum_required(VERSION 3.23)
 project(cmakedemo VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 14)
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 # include(cmakeConfig/cmake_compiler.cmake)
-include(cmakeConfig/cmake_output_path.cmake)
+#include(cmakeConfig/cmake_output_path.cmake)
 
 include(lib/attachLib.cmake)
 
