@@ -1,0 +1,19 @@
+add_library(imgui
+        ${CMAKE_CURRENT_SOURCE_DIR}/imgui.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/imgui_draw.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/imgui_tables.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/imgui_widgets.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/imgui_demo.cpp
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/backends/imgui_impl_glfw.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+        )
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(imgui
+        ${LIBS}
+        )
+target_include_directories(
+        imgui
+        INTERFACE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+)
