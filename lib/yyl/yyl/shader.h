@@ -6,14 +6,14 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
-
+#include "file_utils.h"
 #include <string>
 #include <fstream>
 #include <sstream>
 #include <iostream>
 
 //#include <unistd.h>
-#include <direct.h>
+//#include <direct.h>
 
 class Shader {
 public:
@@ -21,25 +21,21 @@ public:
 
     // constructor generates the shader on the fly
     // ------------------------------------------------------------------------
-    Shader(const char *vertexPath, const char *fragmentPath) {
+    Shader(const std::string& verPath, const std::string& fragmentPath) {
         // 1. retrieve the vertex/fragment source code from filePath
         std::string vertexCode;
         std::string fragmentCode;
         std::ifstream vShaderFile;
         std::ifstream fShaderFile;
-        char *pathDir = getcwd(NULL, 0);
-        std::string verPath=std::string(pathDir)+std::string(vertexPath);
-        std::string fragPath =std::string(pathDir)+std::string(fragmentPath);
-        free(pathDir);
-        std::cout<<"verPath="<<verPath<<std::endl;
-        std::cout<<"fragPath="<<fragPath<<std::endl;
+//        auto fileV=fileUtils::currentPath(verPath);
+//        std::cout << "fileV=" << fileV << std::endl;
         // ensure ifstream objects can throw exceptions:
         vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         fShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         try {
             // open files
-            vShaderFile.open(verPath);
-            fShaderFile.open(fragPath);
+            vShaderFile.open(fileUtils::currentPath(verPath));
+            fShaderFile.open(fileUtils::currentPath(fragmentPath));
             std::stringstream vShaderStream, fShaderStream;
             // read file's buffer contents into streams
             vShaderStream << vShaderFile.rdbuf();

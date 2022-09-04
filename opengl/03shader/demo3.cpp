@@ -99,7 +99,7 @@ namespace shaper3{
         unsigned int VBO = createVBO();
 
 
-        Shader outShader(R"(\shader\vertex.vert)",R"(\shader\fragment.frag)");
+        Shader outShader(R"(03\shader\vertex.vert)",R"(03\shader\fragment.frag)");
 
         while (!glfwWindowShouldClose(window))
         {

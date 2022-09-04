@@ -2,7 +2,10 @@
 #add_library(yyllib STATIC)
 add_library(yyllib
         yyl.cpp
-        yyl/shader.h)
+        yyl/stb_image.h
+        yyl/file_utils.h
+        yyl/shader.h
+        yyl/file_utils.cpp)
 #target_sources(yyllib
 #        PRIVATE
 #        yyl.cpp
